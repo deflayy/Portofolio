@@ -1,0 +1,152 @@
+/* Container */
+.project-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 80px 40px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+/* Judul */
+.project-container .title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.project-container .title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #007bff;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* Grid */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Card */
+.project-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Slider */
+.slider {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  height: 220px;
+}
+
+.slider-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Tombol navigasi */
+/* Tombol navigasi */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 28px;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: opacity 0.3s ease, background 0.3s ease;
+  opacity: 0; /* default: sembunyi */
+  pointer-events: none; /* biar tidak bisa diklik saat sembunyi */
+}
+
+.project-card:hover .nav-btn {
+  opacity: 1; /* muncul saat hover */
+  pointer-events: auto; /* aktif bisa diklik */
+}
+
+.nav-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.nav-btn.left {
+  left: 12px;
+}
+
+.nav-btn.right {
+  right: 12px;
+}
+
+/* Judul & deskripsi */
+.project-card h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 15px 0 10px;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Tombol link */
+.project-card a {
+  display: inline-block;
+  padding: 10px 22px;
+  background: #007bff;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background 0.3s ease;
+}
+
+.project-card a:hover {
+  background: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .project-container {
+    padding: 60px 20px;
+  }
+
+  .project-container .title {
+    font-size: 1.8rem;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr; /* 1 project per baris di HP */
+  }
+
+  .slider {
+    height: 200px;
+  }
+}
