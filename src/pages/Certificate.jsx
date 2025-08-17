@@ -52,10 +52,12 @@ const Certificate = () => {
   return (
     <div className="certificate-container">
       <h1 className="title">Sertifikat Saya</h1>
-      <div className="card-list">
+      <div className="certificate-grid">
         {certificates.map((cert) => (
-          <div key={cert.id} className="card">
-            <img src={cert.image} alt={cert.title} />
+          <div key={cert.id} className="certificate-card">
+            <div className="image-box">
+              <img src={cert.image} alt={cert.title} />
+            </div>
             <h3>{cert.title}</h3>
             <a href={cert.link} target="_blank" rel="noopener noreferrer">
               🎓 Lihat Credential

@@ -1,8 +1,8 @@
-/* Container utama */
+/* Container */
 .certificate-container {
   width: 100%;
   min-height: 100vh;
-  padding: 100px 40px 60px; /* ✅ lebih besar atas supaya tidak ketiban navbar */
+  padding: 100px 40px 60px;
   background: #f9f9f9;
   text-align: center;
 }
@@ -26,17 +26,17 @@
   border-radius: 2px;
 }
 
-/* Grid list */
-.card-list {
+/* Grid */
+.certificate-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* ✅ 2 kartu per baris */
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
   max-width: 1100px;
   margin: 0 auto;
 }
 
 /* Card */
-.card {
+.certificate-card {
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
@@ -45,33 +45,38 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card:hover {
+.certificate-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Gambar sertifikat */
-.card img {
+/* Gambar */
+.image-box {
   width: 100%;
-  height: auto;
-  aspect-ratio: 1754 / 1241; /* ✅ rasio asli */
-  object-fit: contain;
-  border-radius: 8px;
-  margin-bottom: 15px;
+  aspect-ratio: 16/9;
+  border-radius: 10px;
+  overflow: hidden;
   background: #f0f0f0;
+  margin-bottom: 15px;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Judul sertifikat */
-.card h3 {
+.certificate-card h3 {
   font-size: 1.1rem;
   color: #333;
-  margin-bottom: 15px;
+  margin: 12px 0 16px;
 }
 
-/* Link */
-.card a {
+/* Tombol link */
+.certificate-card a {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 10px 22px;
   background: #007bff;
   color: #fff;
   font-size: 0.95rem;
@@ -81,52 +86,33 @@
   transition: background 0.3s ease;
 }
 
-.card a:hover {
+.certificate-card a:hover {
   background: #0056b3;
 }
 
-/* Responsif untuk Tablet & HP */
+/* Responsive */
 @media (max-width: 768px) {
   .certificate-container {
-    padding: 120px 16px 50px; /* ✅ tambah atas biar aman di HP */
+    padding: 80px 20px 60px;
+  }
+
+  .certificate-container .title {
+    font-size: 1.8rem;
+    margin-top: 20px;
+  }
+
+  .certificate-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .certificate-container {
+    padding: 70px 16px 50px;
   }
 
   .certificate-container .title {
     font-size: 1.6rem;
-    text-align: center;
-  }
-
-  .card {
-    width: 100%;
-    max-width: 340px;
-    margin: 0 auto;
-  }
-
-  .card img {
-    width: 100%;
-    height: auto;
-    max-height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-
-  .card-list {
-    grid-template-columns: 1fr; /* ✅ Jadi 1 kolom di HP */
-    gap: 20px;
-  }
-}
-
-/* Responsif untuk layar kecil (≤ 480px) */
-@media (max-width: 480px) {
-  .certificate-container {
-    padding: 130px 12px 40px; /* ✅ lebih banyak padding atas di HP mini */
-  }
-
-  .certificate-container .title {
-    font-size: 1.4rem;
-  }
-
-  .card img {
-    max-height: 160px;
+    margin-top: 30px;
   }
 }
