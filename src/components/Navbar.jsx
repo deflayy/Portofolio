@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "../css/NavBar.css";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation(); // cek lokasi route sekarang
 
   // Detect scroll
   useEffect(() => {
@@ -19,8 +20,15 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Tentukan apakah sedang di home
+  const isHome = location.pathname === "/";
+
   return (
-    <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
+    <nav
+      className={`navbar ${scrolled ? "scrolled" : ""} ${
+        isHome ? "home-page" : "other-page"
+      }`}
+    >
       <div className="navbar-left">
         <span className="logo">🧠 I Putu The Fly Arnawa</span>
       </div>

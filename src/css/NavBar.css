@@ -1,73 +1,99 @@
-/* === Navbar Utama === */
+/* ====== NAVBAR BASE STYLE ====== */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px 40px;
+  padding: 15px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: background 0.3s ease, color 0.3s ease;
   z-index: 1000;
-  transition: background-color 0.3s ease, padding 0.3s ease,
-    box-shadow 0.3s ease;
-  background-color: black; /* awal transparan */
 }
 
-/* Navbar saat discroll */
+/* Home page (teks putih) */
+.navbar.home-page {
+  background: transparent;
+  color: white;
+}
+
+/* Halaman lain (teks hitam) */
+.navbar.other-page {
+  background: transparent;
+  color: black;
+}
+
+/* Saat di-scroll (semua putih) */
 .navbar.scrolled {
-  background-color: #fff; /* jadi putih */
-  padding: 15px 40px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* shadow lembut */
+  background: rgba(15, 15, 15, 0.95);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  color: #fff !important;
 }
 
-/* Logo */
-.navbar .logo {
-  font-size: 1.2rem;
+/* ====== LOGO ====== */
+.navbar-left .logo {
+  font-size: 1.3rem;
   font-weight: 700;
-  color: #fff; /* default di atas hero (transparan) */
+  color: inherit; /* ikuti warna navbar (putih/ hitam) */
+  letter-spacing: 1px;
   transition: color 0.3s ease;
 }
 
-/* Logo berubah warna setelah scroll */
-.navbar.scrolled .logo {
-  color: #333; /* gelap biar match background putih */
+.navbar-left .logo:hover {
+  color: #ffcc00; /* efek hover kuning */
 }
 
-/* Menu Link */
-.navbar-right a {
-  margin-left: 25px;
+/* ====== NAVIGATION MENU ====== */
+.navbar-right {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-right a,
+.navbar-right .active {
+  text-decoration: none;
+  color: inherit; /* ikuti warna navbar */
   font-size: 1rem;
   font-weight: 500;
-  color: #fff; /* awalnya putih */
-  text-decoration: none;
   transition: color 0.3s ease, transform 0.2s ease;
 }
 
-/* Link hover */
 .navbar-right a:hover {
-  color: #007bff; /* biru konsisten dengan button & accent */
+  color: #ffcc00;
   transform: translateY(-2px);
 }
 
-/* Saat scroll: link berubah warna */
-.navbar.scrolled .navbar-right a {
-  color: #333; /* gelap */
-}
-
-/* Responsive Mobile */
+/* ====== RESPONSIVE ====== */
 @media (max-width: 768px) {
   .navbar {
-    padding: 15px 20px;
+    padding: 10px 20px;
   }
 
   .navbar-right {
-    display: flex;
     gap: 15px;
   }
 
+  .navbar-left .logo {
+    font-size: 1.1rem;
+  }
+
   .navbar-right a {
-    margin-left: 0;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 20px;
+  }
+
+  .navbar-right {
+    margin-top: 10px;
+    flex-wrap: wrap;
+    gap: 12px;
   }
 }
