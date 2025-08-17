@@ -2,7 +2,7 @@
 .project-container {
   width: 100%;
   min-height: 100vh;
-  padding: 80px 40px;
+  padding: 100px 40px 60px; /* ✅ sama seperti sebelumnya */
   background: #f9f9f9;
   text-align: center;
 }
@@ -57,14 +57,14 @@
   border-radius: 10px;
   margin-bottom: 15px;
   width: 100%;
-  aspect-ratio: 16/9; /* ✅ menjaga proporsional */
-  background: #f0f0f0; /* placeholder biar gak kosong */
+  aspect-ratio: 16/9;
+  background: #f0f0f0;
 }
 
 .slider-image {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* ✅ isi penuh tanpa lonjong */
+  object-fit: cover;
   border-radius: 10px;
 }
 
@@ -81,13 +81,13 @@
   cursor: pointer;
   border-radius: 50%;
   transition: opacity 0.3s ease, background 0.3s ease;
-  opacity: 0; /* default: sembunyi */
-  pointer-events: none; /* biar tidak bisa diklik saat sembunyi */
+  opacity: 0;
+  pointer-events: none;
 }
 
 .project-card:hover .nav-btn {
-  opacity: 1; /* muncul saat hover */
-  pointer-events: auto; /* aktif bisa diklik */
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .nav-btn:hover {
@@ -136,18 +136,30 @@
 /* Responsive */
 @media (max-width: 768px) {
   .project-container {
-    padding: 60px 20px;
+    padding: 80px 20px 60px; /* ✅ tetap mirip desktop */
   }
 
   .project-container .title {
     font-size: 1.8rem;
+    margin-top: 20px; /* ✅ cuma tambah sedikit biar gak ketutup navbar */
   }
 
   .project-grid {
-    grid-template-columns: 1fr; /* 1 project per baris di HP */
+    grid-template-columns: 1fr;
   }
 
   .slider {
-    aspect-ratio: 4/3; /* ✅ di hp pakai rasio lebih tinggi */
+    aspect-ratio: 4/3;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-container {
+    padding: 70px 16px 50px;
+  }
+
+  .project-container .title {
+    font-size: 1.6rem;
+    margin-top: 30px; /* ✅ tetap proporsional di layar kecil */
   }
 }

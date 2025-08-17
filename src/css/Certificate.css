@@ -2,7 +2,7 @@
 .certificate-container {
   width: 100%;
   min-height: 100vh;
-  padding: 80px 40px;
+  padding: 100px 40px 60px; /* ✅ lebih besar atas supaya tidak ketiban navbar */
   background: #f9f9f9;
   text-align: center;
 }
@@ -52,13 +52,13 @@
 
 /* Gambar sertifikat */
 .card img {
-  width: 100%; /* Ikuti lebar card */
-  height: auto; /* Biar rasio 1754x1241 tetap */
-  aspect-ratio: 1754 / 1241; /* Pakai rasio asli */
-  object-fit: contain; /* Gambar tampil penuh tanpa terpotong */
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1754 / 1241; /* ✅ rasio asli */
+  object-fit: contain;
   border-radius: 8px;
   margin-bottom: 15px;
-  background: #f0f0f0; /* Biar ada background abu-abu saat gambar kecil */
+  background: #f0f0f0;
 }
 
 /* Judul sertifikat */
@@ -85,41 +85,41 @@
   background: #0056b3;
 }
 
-/* Responsif untuk HP */
+/* Responsif untuk Tablet & HP */
 @media (max-width: 768px) {
   .certificate-container {
-    padding: 80px 16px 40px; /* tambahin padding atas lebih besar (80px) */
+    padding: 120px 16px 50px; /* ✅ tambah atas biar aman di HP */
   }
 
   .certificate-container .title {
-    font-size: 1.6rem; /* sedikit lebih kecil */
+    font-size: 1.6rem;
     text-align: center;
   }
 
   .card {
-    width: 100%; /* full width biar rapi */
-    max-width: 340px; /* batasi biar nggak terlalu lebar */
-    margin: 0 auto; /* center di layar */
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
   }
 
   .card img {
-    width: 100%; /* gambar full ke lebar card */
-    height: auto; /* biar tidak gepeng */
-    max-height: 200px; /* batasi supaya nggak terlalu panjang */
-    object-fit: cover; /* isi penuh rapi */
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
     border-radius: 8px;
   }
 
   .card-list {
     grid-template-columns: 1fr; /* ✅ Jadi 1 kolom di HP */
-    gap: 20px; /* jarak antar card */
+    gap: 20px;
   }
 }
 
-/* Responsif layar sangat kecil (HP mini ≤ 480px) */
+/* Responsif untuk layar kecil (≤ 480px) */
 @media (max-width: 480px) {
   .certificate-container {
-    padding: 30px 12px;
+    padding: 130px 12px 40px; /* ✅ lebih banyak padding atas di HP mini */
   }
 
   .certificate-container .title {
@@ -127,6 +127,6 @@
   }
 
   .card img {
-    max-height: 160px; /* gambar lebih pendek di HP kecil */
+    max-height: 160px;
   }
 }
