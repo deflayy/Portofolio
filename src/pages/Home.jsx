@@ -59,21 +59,21 @@ const Home = () => {
 
           <div className="social-icons">
             <a
-              href="https://www.linkedin.com/in/namaanda"
+              href="https://www.linkedin.com/in/deflay/"
               target="_blank"
               rel="noopener noreferrer"
             >
               🔗 LinkedIn
             </a>
             <a
-              href="https://www.instagram.com/namaanda"
+              href="https://www.instagram.com/deflayy/"
               target="_blank"
               rel="noopener noreferrer"
             >
               📷 Instagram
             </a>
             <a
-              href="https://wa.me/6281234567890"
+              href="https://wa.me/6285137045525"
               target="_blank"
               rel="noopener noreferrer"
             >
