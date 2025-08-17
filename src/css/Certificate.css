@@ -52,11 +52,13 @@
 
 /* Gambar sertifikat */
 .card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
+  width: 100%; /* Ikuti lebar card */
+  height: auto; /* Biar rasio 1754x1241 tetap */
+  aspect-ratio: 1754 / 1241; /* Pakai rasio asli */
+  object-fit: contain; /* Gambar tampil penuh tanpa terpotong */
   border-radius: 8px;
   margin-bottom: 15px;
+  background: #f0f0f0; /* Biar ada background abu-abu saat gambar kecil */
 }
 
 /* Judul sertifikat */
@@ -86,18 +88,45 @@
 /* Responsif untuk HP */
 @media (max-width: 768px) {
   .certificate-container {
-    padding: 60px 20px;
+    padding: 40px 16px; /* padding lebih kecil biar lega di layar HP */
   }
 
   .certificate-container .title {
-    font-size: 1.8rem;
+    font-size: 1.6rem; /* sedikit lebih kecil */
+    text-align: center;
+  }
+
+  .card {
+    width: 100%; /* full width biar rapi */
+    max-width: 340px; /* batasi biar nggak terlalu lebar */
+    margin: 0 auto; /* center di layar */
   }
 
   .card img {
-    height: 160px;
+    width: 100%; /* gambar full ke lebar card */
+    height: auto; /* biar tidak gepeng */
+    max-height: 200px; /* batasi supaya nggak terlalu panjang */
+    object-fit: cover; /* isi penuh rapi */
+    border-radius: 8px;
   }
 
   .card-list {
     grid-template-columns: 1fr; /* ✅ Jadi 1 kolom di HP */
+    gap: 20px; /* jarak antar card */
+  }
+}
+
+/* Responsif layar sangat kecil (HP mini ≤ 480px) */
+@media (max-width: 480px) {
+  .certificate-container {
+    padding: 30px 12px;
+  }
+
+  .certificate-container .title {
+    font-size: 1.4rem;
+  }
+
+  .card img {
+    max-height: 160px; /* gambar lebih pendek di HP kecil */
   }
 }

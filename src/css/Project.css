@@ -56,17 +56,18 @@
   overflow: hidden;
   border-radius: 10px;
   margin-bottom: 15px;
-  height: 220px;
+  width: 100%;
+  aspect-ratio: 16/9; /* ✅ menjaga proporsional */
+  background: #f0f0f0; /* placeholder biar gak kosong */
 }
 
 .slider-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* ✅ isi penuh tanpa lonjong */
   border-radius: 10px;
 }
 
-/* Tombol navigasi */
 /* Tombol navigasi */
 .nav-btn {
   position: absolute;
@@ -147,6 +148,6 @@
   }
 
   .slider {
-    height: 200px;
+    aspect-ratio: 4/3; /* ✅ di hp pakai rasio lebih tinggi */
   }
 }
