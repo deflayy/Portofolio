@@ -30,14 +30,22 @@ const Navbar = () => {
       }`}
     >
       <div className="navbar-left">
-        <span className="logo">🧠 I Putu The Fly Arnawa</span>
+        <div className="navbar-left">
+          <span
+            className="logo"
+            onClick={() => (window.location.href = "/")}
+            style={{ cursor: "pointer" }}
+          >
+            I Putu The Fly Arnawa
+          </span>
+        </div>
       </div>
       <div className="navbar-right">
         <Link to="/">Home</Link>
         <Link to="/certificate">Certificate</Link>
         <Link to="/project">Project</Link>
         <a
-          href="https://drive.google.com/file/d/1uGil3gr20ebDxyz_otE6A49_MIR7H7zd/view?usp=drive_link"
+          href="https://drive.google.com/uc?export=download&id=1PCaTXkIiNoNFLYDb7_yKuUYs375Pe1IT"
           target="_blank"
           rel="noopener noreferrer"
         >
