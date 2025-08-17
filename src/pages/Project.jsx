@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../css/Project.css";
-import sampleImg from "../assets/serti.jpg"; // contoh gambar
+import sampleImg from "../assets/serti2.jpg"; // contoh gambar
 
 const projects = [
   {
