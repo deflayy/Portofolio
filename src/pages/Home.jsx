@@ -21,9 +21,7 @@ const Home = () => {
       >
         <h1>Hi, I'm Deflay 👋</h1>
         <p>
-          Seorang web developer dan data analyst. Saya senang membangun sesuatu
-          yang <strong>berguna</strong>, <strong>efisien</strong>, dan{" "}
-          <strong>berdampak</strong>.
+          Data Analyst & Web Developer | Turning Data and Code into Solutions
         </p>
       </div>
 
