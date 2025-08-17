@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "../css/NavBar.css";
+import resumeFile from "../assets/Resume.pdf";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -44,11 +45,8 @@ const Navbar = () => {
         <Link to="/">Home</Link>
         <Link to="/certificate">Certificate</Link>
         <Link to="/project">Project</Link>
-        <a
-          href="https://drive.google.com/uc?export=download&id=1PCaTXkIiNoNFLYDb7_yKuUYs375Pe1IT"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+
+        <a href={resumeFile} download="Resume_I_Putu_TheFly_Arnawa.pdf">
           Resume
         </a>
       </div>

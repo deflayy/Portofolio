@@ -36,9 +36,25 @@ const Home = () => {
         <div className="home-text">
           <h2>About Me</h2>
           <p>
-            Saya memiliki passion dalam mengembangkan aplikasi web dan
-            menganalisis data untuk memberikan insight yang bermanfaat.
-            Mengutamakan desain yang clean dan kinerja optimal.
+            Saya <b>I Putu The Fly Arnawa</b>, Fresh Graduate Sistem Informasi
+            dari Universitas Mercu Buana dengan ketertarikan besar pada{" "}
+            <b>Data Analysis</b> dan <b>Web Development</b>. Terampil
+            menggunakan SQL dan Python untuk mengolah data, serta berpengalaman
+            membangun website modern dengan HTML, CSS, JavaScript, dan React
+            Vite.
+            <br />
+            <br />
+            Saya menguasai proses data cleaning, transformation, dan exploratory
+            data analysis (EDA), serta terbiasa membuat visualisasi interaktif
+            menggunakan Tableau, Power BI, dan Google Looker Studio. Selain itu,
+            pengalaman sebagai Web Developer & UI/UX Designer di Infinite
+            Learning Indonesia memperkuat kemampuan saya dalam membangun
+            aplikasi web yang responsif dan ramah pengguna.
+            <br />
+            <br />
+            Dengan perpaduan keahlian di bidang data dan web, saya berkomitmen
+            menghadirkan insight yang aplikatif melalui dashboard maupun website
+            interaktif untuk mendukung pengambilan keputusan yang lebih baik.
           </p>
 
           <div className="social-icons">

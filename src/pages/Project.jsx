@@ -50,7 +50,7 @@ const projects = [
 const Project = () => {
   return (
     <div className="project-container">
-      <h1 className="title">Proyek Saya</h1>
+      <h1 className="title">Proyek Saya (Sedang Diperbaiki 18 Agustus 2025)</h1>
       <div className="project-grid">
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />

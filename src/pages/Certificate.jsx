@@ -12,37 +12,37 @@ import serti6 from "../assets/serti6.jpg";
 const certificates = [
   {
     id: 1,
-    title: "Dicoding React Developer 1",
+    title: "Software Engineer",
     image: serti1,
     link: "https://www.dicoding.com/certificates/XXXXXX",
   },
   {
     id: 2,
-    title: "Dicoding React Developer 2",
+    title: "Certified Associate in Scrum Fundamentals ",
     image: serti2,
     link: "https://www.dicoding.com/certificates/XXXXXX",
   },
   {
     id: 3,
-    title: "Dicoding React Developer 3",
+    title: "Internship Web Developer (infinite learning)",
     image: serti3,
     link: "https://www.dicoding.com/certificates/XXXXXX",
   },
   {
     id: 4,
-    title: "Belajar Dasar Data 4",
+    title: "Independent Study Program Batch 6 on Web Development",
     image: serti4,
     link: "https://www.dicoding.com/certificates/YYYYYY",
   },
   {
     id: 5,
-    title: "Belajar Dasar Data 5",
+    title: "Database Programming With SQL (Oracle Academy)",
     image: serti5,
     link: "https://www.dicoding.com/certificates/YYYYYY",
   },
   {
     id: 6,
-    title: "Belajar Dasar Data 6",
+    title: "Database Desain (Oracle Academy)",
     image: serti6,
     link: "https://www.dicoding.com/certificates/YYYYYY",
   },
