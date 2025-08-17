@@ -88,7 +88,7 @@
 /* Responsif untuk HP */
 @media (max-width: 768px) {
   .certificate-container {
-    padding: 40px 16px; /* padding lebih kecil biar lega di layar HP */
+    padding: 80px 16px 40px; /* tambahin padding atas lebih besar (80px) */
   }
 
   .certificate-container .title {
