@@ -1,12 +1,29 @@
-# React + Vite
+---
+## 📄 License & Copyright
+© 2025 **I Putu The Fly Arnawa**
+This portfolio and all its content are protected.
+You are free to explore, but please give credit if you use any part of my work.
+---
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Disclaimer
 
-Currently, two official plugins are available:
+All projects showcased here are part of my learning journey, professional experience, and personal initiatives.  
+They are intended for educational and portfolio purposes only.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🤝 Contribution & Usage
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- You are welcome to **explore, fork, and learn** from my repositories.
+- If you use my code, designs, or ideas, please provide proper **attribution/credit**.
+- For collaboration or project inquiries, feel free to reach out.
+
+---
+
+## 📫 Contact
+
+- 📧 Email: [ipututhefly@gmail.com](mailto:ipututhefly@gmail.com)
+- 💼 LinkedIn: [linkedin.com/in/deflay](https://linkedin.com/in/deflay)
+- 🌐 Website: [deflay.vercel.app](https://deflay.vercel.app/)
+
+---
