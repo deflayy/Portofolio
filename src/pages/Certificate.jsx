@@ -20,7 +20,7 @@ const certificates = [
     id: 2,
     title: "Certified Associate in Scrum Fundamentals ",
     image: serti2,
-    link: "https://drive.google.com/file/d/1dUnN6UNfNNRywyXP4t7nwYZjoFaIhd_P/view?usp=drive_link",
+    link: "https://www.skillfront.com/Badges/32848421296297",
   },
   {
     id: 3,
